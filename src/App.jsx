@@ -903,7 +903,7 @@ export default function App() {
         </a>{" "}
         ·{" "}
         <a
-          href="https://kian-portfolio-psi.vercel.app/"
+          href="https://portfolio.askkuyakian.online/"
           target="_blank"
           rel="noreferrer"
         >
