@@ -1,17 +1,21 @@
 export const experience = [
   {
-    company: "Freelance / Self-Employed",
-    role: "Full-Stack & ML Engineer",
-    dates: "2022 - Present",
-    desc: "Delivered 12+ systems for clients including retail inventory platforms, e-commerce sites with payment integration, and ML-powered web apps. Specialized in FastAPI, React, and Python-based data pipelines.",
-    tech: ["FastAPI", "React", "Python", "Docker", "PostgreSQL"],
+    company: "HighSpring",
+    role: "Software Engineer - Flask, FastAPI, MySQL",
+    desc: "Built backend systems and APIs focused on reliable web application flows, database-backed features, and maintainable service architecture.",
+    tech: ["Flask", "FastAPI", "MySQL"],
   },
   {
-    company: "Pamantasan ng Lungsod ng Pasig",
-    role: "Student Developer (Contract)",
-    dates: "2020",
-    desc: "Developed a Student Management System covering enrollment, grading, and attendance tracking with automated PDF report generation. First professional project delivered on time.",
-    tech: ["PHP", "MySQL", "JavaScript", "Bootstrap"],
+    company: "University of Southern Mindanao",
+    role: "Full Stack Developer - Laravel, Vue.js, PrimeVue, Inertia.js, SQL Server",
+    desc: "Delivered full-stack product features across backend and frontend layers, with a focus on admin workflows, data-heavy interfaces, and smooth user experience.",
+    tech: ["Laravel", "Vue.js", "PrimeVue", "Inertia.js", "SQL Server"],
+  },
+  {
+    company: "Upwork",
+    role: "Freelance Software Developer - Anything",
+    desc: "Worked on a wide range of client needs, adapting to different tools, product requirements, and delivery timelines to ship practical software solutions.",
+    tech: ["React", "Python", "PHP", "FastAPI", "Laravel"],
   },
 ];
 
@@ -19,37 +23,37 @@ export const projects = [
   {
     title: "Crowd Monitoring with AI",
     desc: "Capstone project: IoT-based crowd detection using WiFi probe requests with real-time AI dashboard and WebSocket visualization.",
-    img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80",
+    href: "https://github.com/kiannaquines/crowd-monitoring-app",
     tech: ["Python", "FastAPI", "React", "MQTT", "Docker", "ML"],
   },
   {
     title: "Web Application Firewall",
     desc: "ML-powered WAF that detects and blocks malicious web traffic using trained classification models.",
-    img: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600&q=80",
+    href: "https://github.com/kiannaquines/web-application-firewall-machine-learning",
     tech: ["Python", "Scikit-learn", "Pandas", "Django"],
   },
   {
     title: "Heart Disease Prediction",
     desc: "Machine learning model achieving 98% accuracy for predicting heart disease risk from patient health data.",
-    img: "https://images.unsplash.com/photo-1576671081837-49000212a370?w=600&q=80",
+    href: "https://github.com/kiannaquines",
     tech: ["Python", "Scikit-learn", "Pandas", "Matplotlib"],
   },
   {
     title: "NLP Transformer App",
     desc: "Web app leveraging transformer-based NLP models for complex language tasks using the GROQ API.",
-    img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&q=80",
+    href: "https://github.com/kiannaquines",
     tech: ["Python", "GROQ API", "FastAPI", "React"],
   },
   {
     title: "Radio Station Log Manager",
     desc: "Log management software for radio stations with scheduling and automated report generation.",
-    img: "https://images.unsplash.com/photo-1598550476439-6847785fcea6?w=600&q=80",
+    href: "https://github.com/kiannaquines",
     tech: ["Laravel", "PHP", "MySQL", "Bootstrap"],
   },
   {
     title: "Student Management System",
     desc: "Built for Pamantasan ng Lungsod ng Pasig - enrollment, grading, attendance tracking, and automated report generation.",
-    img: "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=600&q=80",
+    href: "https://github.com/kiannaquines",
     tech: ["PHP", "MySQL", "JavaScript", "Bootstrap"],
   },
 ];
@@ -115,7 +119,7 @@ export const journey = [
   },
   {
     year: "2020",
-    title: "First Professional Project",
+    title: "First Project",
     desc: "Developed Student Management System for Pamantasan ng Lungsod ng Pasig - enrollment, grading & attendance tracking with automated reports.",
     tech: ["PHP", "MySQL", "JavaScript", "Bootstrap"],
   },

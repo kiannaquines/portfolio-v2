@@ -1,11 +1,5 @@
 import { useEffect, useRef } from "react";
 
-const rings = Array.from({ length: 8 }, (_, index) => ({
-  radius: 60 + index * 90,
-  speed: 0.18 + index * 0.04,
-  offset: (index / 8) * Math.PI * 2,
-}));
-
 export default function RippleBackground({ dark }) {
   const ref = useRef(null);
 
@@ -35,41 +29,49 @@ export default function RippleBackground({ dark }) {
     const draw = () => {
       const width = canvas.offsetWidth;
       const height = canvas.offsetHeight;
-      const cx = width / 2;
-      const cy = height / 2;
+      const gap = width < 640 ? 28 : 36;
+      const dotSize = width < 640 ? 1.1 : 1.4;
 
       ctx.clearRect(0, 0, width, height);
 
-      rings.forEach((ring, index) => {
-        const pulse = ring.radius + Math.sin(tick * ring.speed + ring.offset) * 18;
-        const alpha = dark ? 0.06 + index * 0.008 : 0.07 + index * 0.009;
-        const color = dark
-          ? `rgba(96, 165, 250, ${alpha})`
-          : `rgba(59, 130, 246, ${alpha})`;
-
-        ctx.beginPath();
-        ctx.arc(cx, cy, pulse, 0, Math.PI * 2);
-        ctx.strokeStyle = color;
-        ctx.lineWidth = 1.5;
-        ctx.stroke();
-
-        if (index === 0) {
-          const gradient = ctx.createRadialGradient(cx, cy, 0, cx, cy, pulse);
-
-          gradient.addColorStop(
-            0,
-            dark ? "rgba(96,165,250,0.06)" : "rgba(59,130,246,0.04)"
-          );
-          gradient.addColorStop(1, "rgba(0,0,0,0)");
+      for (let x = gap / 2; x < width; x += gap) {
+        for (let y = gap / 2; y < height; y += gap) {
+          const waveX = Math.sin(tick * 0.9 + x * 0.014);
+          const waveY = Math.cos(tick * 1.1 + y * 0.018);
+          const pulse = (waveX + waveY + 2) / 4;
+          const alpha = dark
+            ? 0.08 + pulse * 0.12
+            : 0.06 + pulse * 0.1;
+          const radius = dotSize + pulse * 1.8;
 
           ctx.beginPath();
-          ctx.arc(cx, cy, pulse, 0, Math.PI * 2);
-          ctx.fillStyle = gradient;
+          ctx.arc(x, y, radius, 0, Math.PI * 2);
+          ctx.fillStyle = dark
+            ? `rgba(96, 165, 250, ${alpha})`
+            : `rgba(59, 130, 246, ${alpha})`;
           ctx.fill();
         }
-      });
+      }
 
-      tick += 0.012;
+      const gradient = ctx.createRadialGradient(
+        width / 2,
+        height / 2,
+        Math.min(width, height) * 0.08,
+        width / 2,
+        height / 2,
+        Math.max(width, height) * 0.72
+      );
+
+      gradient.addColorStop(0, "rgba(0,0,0,0)");
+      gradient.addColorStop(
+        1,
+        dark ? "rgba(12,10,9,0.12)" : "rgba(245,245,244,0.12)"
+      );
+
+      ctx.fillStyle = gradient;
+      ctx.fillRect(0, 0, width, height);
+
+      tick += 0.02;
       animationFrameId = window.requestAnimationFrame(draw);
     };
 
