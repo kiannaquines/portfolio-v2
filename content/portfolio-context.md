@@ -3,8 +3,8 @@
 ## Profile
 
 - Name: Kian Naquines
-- Role: AI-First Full-Stack Engineer
-- Location: North Cotabato, Philippines
+- Role: Software Engineer (AI-Ready Full-Stack)
+- Location: United States (currently) / Philippines
 - Timezone: Asia/Manila
 - Email: kjgnaquines@gmail.com
 - Phone: +63 9013630647
@@ -13,77 +13,89 @@
 
 ## Summary
 
-Kian designs, builds, and ships reliable web and mobile systems with an AI-first mindset. Recent work includes real-time data pipelines, ML-powered product features, backend systems, and tooling that speeds up delivery.
+Kian designs, builds, and ships reliable web and mobile systems with an AI-ready mindset. Recent work includes backend APIs, full-stack product features, security-oriented ML experiments, and practical business software.
 
 ## Experience
 
 ### HighSpring
 
-- Role: Software Engineer - Flask, FastAPI, MySQL
-- Details: Built backend systems and APIs focused on reliable web application flows, database-backed features, and maintainable service architecture.
-- Tech: Flask, FastAPI, MySQL
+- Role: Software Engineer · Flask, FastAPI, MySQL
+- Details: Built backend services and APIs for production web applications with an emphasis on reliability, clean structure, and maintainable data access patterns.
+- Tech: Flask, FastAPI, MySQL, REST APIs
 
 ### University of Southern Mindanao
 
-- Role: Full Stack Developer - Laravel, Vue.js, PrimeVue, Inertia.js, SQL Server
-- Details: Delivered full-stack product features across backend and frontend layers, with a focus on admin workflows, data-heavy interfaces, and smooth user experience.
+- Role: Full-Stack Developer · Laravel, Vue.js, PrimeVue, Inertia.js, SQL Server
+- Details: Delivered full-stack product features focused on admin workflows, operational dashboards, and role-based data management experiences.
 - Tech: Laravel, Vue.js, PrimeVue, Inertia.js, SQL Server
 
 ### Upwork
 
-- Role: Freelance Software Developer - Anything
-- Details: Worked on a wide range of client needs, adapting to different tools, product requirements, and delivery timelines to ship practical software solutions.
-- Tech: React, Python, PHP, FastAPI, Laravel
+- Role: Freelance Software Developer
+- Details: Built practical client solutions end-to-end, from requirement discovery to deployment, across web platforms and internal business tools.
+- Tech: React, Python, PHP, FastAPI, Laravel, Docker
 
 ## Projects
 
 ### Crowd Monitoring with AI
 
-- Details: Capstone project using WiFi probe requests with a real-time AI dashboard and WebSocket visualization.
-- Tech: Python, FastAPI, React, MQTT, Docker, ML
+- Details: Capstone platform for privacy-conscious crowd monitoring using WiFi probe signals with real-time dashboard updates.
+- Tech: TypeScript, FastAPI, React, MQTT, Docker, ML
 - Link: https://github.com/kiannaquines/crowd-monitoring-app
 
 ### Web Application Firewall
 
-- Details: ML-powered WAF that detects and blocks malicious web traffic using trained classification models.
-- Tech: Python, Scikit-learn, Pandas, Django
+- Details: Machine-learning-powered WAF that classifies and filters suspicious web traffic.
+- Tech: Python, Scikit-learn, Pandas, Jupyter
 - Link: https://github.com/kiannaquines/web-application-firewall-machine-learning
 
-### Heart Disease Prediction
+### Pharmacy System
 
-- Details: Machine learning model for predicting heart disease risk from patient health data.
-- Tech: Python, Scikit-learn, Pandas, Matplotlib
-- Link: https://github.com/kiannaquines
+- Details: Full-stack TypeScript-based pharmacy management application for day-to-day pharmacy operations.
+- Tech: TypeScript, React, Node.js, PostgreSQL
+- Link: https://github.com/kiannaquines/pharmacy-system
 
-### NLP Transformer App
+### Django Pharmacy SaaS
 
-- Details: Web app leveraging transformer-based NLP models for language tasks using the GROQ API.
-- Tech: Python, GROQ API, FastAPI, React
-- Link: https://github.com/kiannaquines
+- Details: Django-based SaaS-style pharmacy project focused on scalable multi-user workflows.
+- Tech: Django, Python, HTML, CSS
+- Link: https://github.com/kiannaquines/django-pharmacy-saas
 
-### Radio Station Log Manager
+### eReportMo Mobile App
 
-- Details: Log management software for radio stations with scheduling and automated report generation.
-- Tech: Laravel, PHP, MySQL, Bootstrap
-- Link: https://github.com/kiannaquines
+- Details: Flutter incident-reporting app focused on straightforward mobile reporting experiences.
+- Tech: Flutter, Dart
+- Link: https://github.com/kiannaquines/ereportmo-app
 
-### Student Management System
+### Feed Formulation Optimizer
 
-- Details: Enrollment, grading, attendance tracking, and automated report generation for school administration.
-- Tech: PHP, MySQL, JavaScript, Bootstrap
-- Link: https://github.com/kiannaquines
+- Details: Linear-programming-powered backend system for optimizing poultry feed based on cost and nutrition constraints.
+- Tech: Python, Linear Programming, Optimization
+- Link: https://github.com/kiannaquines/backend-feedformulation
 
 ## Technologies
 
-React, Next.js, TypeScript, JavaScript, Tailwind CSS, Node.js, Python, Go, PHP, Django, Flask, FastAPI, Laravel, PostgreSQL, MySQL, MongoDB, SQLAlchemy, Flutter, Bootstrap, jQuery, scikit-learn, TensorFlow, Pandas, Docker, MQTT
+React, Next.js, TypeScript, JavaScript, Tailwind CSS, Node.js, Python, Go, PHP, Django, Flask, FastAPI, Laravel, Vue.js, Inertia.js, SQL Server, PostgreSQL, MySQL, Redis, Supabase, REST APIs, GitHub Actions, Flutter, Dart, Scikit-learn, Pandas, Docker, MQTT, Linear Programming
 
 ## Journey
 
 ### Now
 
-- Title: AI-First Full-Stack Engineer
-- Details: Building microservices, CI/CD pipelines with Docker and GitHub Actions, ML-powered features, and real-time data pipelines.
-- Tech: Docker, Python, Go, NextJS, React, AceternityUI
+- Title: Software Engineer Building AI-Ready Products
+- Details: Shipping full-stack applications and backend APIs while blending practical product delivery with AI-assisted problem solving.
+- Tech: Python, TypeScript, FastAPI, React, Docker, GitHub Actions
+
+### 2026
+
+- Title: Modern Product Momentum
+- Details: Expanded project range with pharmacy systems and client-facing web/mobile applications.
+- Tech: TypeScript, Django, Flutter, Node.js
+
+### 2025
+
+- Title: Architecture and Backend Depth
+- Details: Built backend-first projects exploring maintainable service structure and scalable workflows.
+- Tech: Flask, FastAPI, MySQL, Docker
 
 ### 2024
 
@@ -93,8 +105,8 @@ React, Next.js, TypeScript, JavaScript, Tailwind CSS, Node.js, Python, Go, PHP, 
 
 ### 2023
 
-- Title: Data Science and ML Breakthrough
-- Details: Built a heart disease prediction model and delivered multiple business systems across different domains.
+- Title: Applied ML and Business Systems
+- Details: Built practical ML prototypes and delivered business systems in operational domains.
 - Tech: Python, Django, Scikit-learn, Pandas
 
 ### 2022
@@ -109,16 +121,10 @@ React, Next.js, TypeScript, JavaScript, Tailwind CSS, Node.js, Python, Go, PHP, 
 - Details: Built strong foundations in problem solving, algorithms, and coding practice in Python and Java.
 - Tech: Python, Java, DSA
 
-### 2020
-
-- Title: First Professional Project
-- Details: Built a student management system covering enrollment, grading, attendance, and automated reporting.
-- Tech: PHP, MySQL, JavaScript, Bootstrap
-
 ### 2018
 
 - Title: Programming Journey Begins
-- Details: Learned HTML and CSS fundamentals, built first static websites, and discovered PHP for dynamic content.
+- Details: Learned web fundamentals and gradually moved from static sites to full-stack product development.
 - Tech: PHP, HTML, CSS, JavaScript
 
 ## Work Availability
