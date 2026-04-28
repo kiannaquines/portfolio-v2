@@ -1,10 +1,10 @@
 export const experience = [
-  {
-    company: "HighSpring",
-    role: "Software Engineer · Flask, FastAPI, MySQL",
-    desc: "Built backend services and APIs for production web applications, focusing on clean architecture, reliable data flows, and maintainable engineering patterns.",
-    tech: ["Flask", "FastAPI", "MySQL", "REST APIs"],
-  },
+  // {
+  //   company: "HighSpring",
+  //   role: "Software Engineer · Flask, FastAPI, MySQL",
+  //   desc: "Built backend services and APIs for production web applications, focusing on clean architecture, reliable data flows, and maintainable engineering patterns.",
+  //   tech: ["Flask", "FastAPI", "MySQL", "REST APIs"],
+  // },
   {
     company: "University of Southern Mindanao",
     role: "Full-Stack Developer · Laravel, Vue.js, Inertia.js, SQL Server",
