@@ -4,7 +4,7 @@
 
 - Name: Kian Naquines
 - Role: Software Engineer (AI-Ready Full-Stack)
-- Location: United States (currently) / Philippines
+- Location: Philippines
 - Timezone: Asia/Manila
 - Email: kjgnaquines@gmail.com
 - Phone: +63 9013630647
