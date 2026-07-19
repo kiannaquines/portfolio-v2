@@ -361,7 +361,7 @@ export default function App() {
       <div className="container">
         <section id="about" className="hero">
           <div className="hero-name">
-            Kian Naquines
+            Kian Jearard G. Naquines
             <span className="badge badge-green">
               <Circle size={8} fill="currentColor" strokeWidth={0} />
               Open to Work
