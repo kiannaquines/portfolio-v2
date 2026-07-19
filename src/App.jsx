@@ -1,12 +1,8 @@
 import { useEffect, useRef, useState } from "react";
-import confetti from "canvas-confetti";
 import {
-  ArrowRight,
   Bot,
   Check,
-  ChevronDown,
   Code2,
-  Download,
   Mail,
   MapPin,
   Link2,
@@ -19,38 +15,23 @@ import {
   Sun,
   Clock3,
   Circle,
-  Trophy,
   UserRound,
   X,
 } from "lucide-react";
-import Globe from "./components/Globe";
-import { experience, journey, projects, technologies } from "./data/portfolio";
+import {
+  achievements,
+  certifications,
+  education,
+  experience,
+  projects,
+  technologies,
+} from "./data/portfolio";
 
 const navLinks = [
   { label: "About", href: "#about" },
   { label: "Projects", href: "#projects" },
-  { label: "Journey", href: "#journey" },
+  { label: "Achievements", href: "#achievements" },
   { label: "Contact", href: "#contact" },
-];
-
-const githubAchievements = [
-  {
-    label: "Pull Shark",
-    image: "https://github.githubassets.com/images/modules/profile/achievements/pull-shark-default.png",
-    count: "x3",
-  },
-  {
-    label: "YOLO",
-    image: "https://github.githubassets.com/images/modules/profile/achievements/yolo-default.png",
-  },
-  {
-    label: "Pair Extraordinaire",
-    image: "https://github.githubassets.com/images/modules/profile/achievements/pair-extraordinaire-default.png",
-  },
-  {
-    label: "Quickdraw",
-    image: "https://github.githubassets.com/images/modules/profile/achievements/quickdraw-default.png",
-  },
 ];
 
 const technologyAccents = {
@@ -120,30 +101,11 @@ const technologyIcons = {
   MQTT: "https://cdn.simpleicons.org/mqtt/660066",
 };
 
-const trackedSections = [
-  { id: "about", label: "About" },
-  { id: "projects", label: "Projects" },
-  { id: "technologies", label: "Technologies" },
-  { id: "experience", label: "Experience" },
-  { id: "journey", label: "Journey" },
-  { id: "contact", label: "Contact" },
-];
-
 const chatPromptOptions = [
-  "What kind of projects has Kian built?",
-  "What stack does Kian use most?",
-  "Why should I hire Kian for backend work?",
+  "Which projects best show Kian's backend work?",
+  "What stack does Kian use for full-stack apps?",
+  "Where does Kian apply AI or ML?",
 ];
-
-const journeyHighlights = {
-  Now: "Unlocked: current focus on production-ready AI, backend systems, and fast shipping.",
-  2024: "Unlocked: real-time dashboards, IoT workflows, and privacy-conscious system design.",
-  2023: "Unlocked: a strong machine learning push with practical business systems delivered.",
-  2022: "Unlocked: freelance momentum through client delivery and real-world platform work.",
-  2021: "Unlocked: strong programming fundamentals, algorithms, and problem-solving reps.",
-  2020: "Unlocked: first major production delivery with school administration workflows.",
-  2018: "Unlocked: the foundation years with web basics and early PHP experimentation.",
-};
 
 function getTechInsight(techName) {
   if (!techName) {
@@ -165,7 +127,7 @@ function getTechInsight(techName) {
   );
 
   return {
-    title: `${techName} unlocked`,
+    title: `${techName} in practice`,
     stats: [
       `${relatedProjects.length} related project${relatedProjects.length === 1 ? "" : "s"}`,
       `${relatedExperience.length} experience role${relatedExperience.length === 1 ? "" : "s"}`,
@@ -178,18 +140,15 @@ function getTechInsight(techName) {
 }
 
 export default function App() {
-  const [dark, setDark] = useState(false);
+  const [dark, setDark] = useState(true);
   const [email, setEmail] = useState("");
   const [selectedTech, setSelectedTech] = useState(null);
-  const [seenSections, setSeenSections] = useState([]);
-  const [explorerComplete, setExplorerComplete] = useState(false);
   const [showFloatingNav, setShowFloatingNav] = useState(false);
-  const [chatOpen, setChatOpen] = useState(false);
+  const [chatOpen, setChatOpen] = useState(true);
   const [chatInput, setChatInput] = useState("");
   const [chatLoading, setChatLoading] = useState(false);
   const [chatError, setChatError] = useState("");
   const [usedPrompts, setUsedPrompts] = useState([]);
-  const [expandedJourney, setExpandedJourney] = useState(null);
   const [chatMessages, setChatMessages] = useState([
     {
       role: "assistant",
@@ -267,73 +226,6 @@ export default function App() {
     chatMessagesRef.current.scrollTop = chatMessagesRef.current.scrollHeight;
   }, [chatMessages, chatLoading, chatOpen]);
 
-  useEffect(() => {
-    const sectionElements = trackedSections
-      .map((item) => document.getElementById(item.id))
-      .filter(Boolean);
-
-    if (!sectionElements.length) {
-      return undefined;
-    }
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) {
-            return;
-          }
-
-          setSeenSections((current) =>
-            current.includes(entry.target.id) ? current : [...current, entry.target.id]
-          );
-        });
-      },
-      {
-        rootMargin: "0px 0px -20% 0px",
-        threshold: 0.12,
-      }
-    );
-
-    sectionElements.forEach((element) => observer.observe(element));
-
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
-
-  useEffect(() => {
-    const completed = seenSections.length === trackedSections.length;
-
-    if (!completed || explorerComplete) {
-      return;
-    }
-
-    setExplorerComplete(true);
-
-    const colors = ["#2563eb", "#14b8a6", "#f59e0b", "#ef4444", "#8b5cf6", "#22c55e"];
-    const end = Date.now() + 3600;
-
-    const rain = () => {
-      confetti({
-        particleCount: 18,
-        angle: 90,
-        spread: 70,
-        startVelocity: 24,
-        ticks: 360,
-        gravity: 0.72,
-        origin: { x: Math.random(), y: -0.08 },
-        colors,
-        scalar: 0.95,
-      });
-
-      if (Date.now() < end) {
-        window.requestAnimationFrame(rain);
-      }
-    };
-
-    rain();
-  }, [seenSections, explorerComplete]);
-
   const footerYear = new Date().getFullYear();
   const safeEmail = email.trim();
   const subject = encodeURIComponent("Portfolio enquiry");
@@ -342,8 +234,6 @@ export default function App() {
     : encodeURIComponent("Hi Kian,\n\n");
   const mailtoLink = `mailto:kjgnaquines@gmail.com?subject=${subject}&body=${body}`;
   const techInsight = getTechInsight(selectedTech);
-  const progressCount = seenSections.length;
-  const progressTotal = trackedSections.length;
 
   function openChatWindow() {
     setChatOpen(true);
@@ -411,27 +301,6 @@ export default function App() {
 
   return (
     <div className={dark ? "site-shell dark" : "site-shell"}>
-      <div className="progress-tracker">
-        <div className="progress-tracker-head">
-          <span className="progress-tracker-label">Explorer Mode</span>
-          <span className={explorerComplete ? "progress-tracker-value complete" : "progress-tracker-value"}>
-            {explorerComplete ? "Done" : `${progressCount}/${progressTotal}`}
-          </span>
-        </div>
-        <div className="progress-track">
-          <span
-            className="progress-track-fill"
-            style={{ width: `${(progressCount / progressTotal) * 100}%` }}
-          />
-        </div>
-        {explorerComplete ? (
-          <div className="progress-success">
-            <Trophy size={14} />
-            Explorer unlocked
-          </div>
-        ) : null}
-      </div>
-
       <nav>
         <img
           className="avatar-circle"
@@ -500,10 +369,10 @@ export default function App() {
           </div>
 
           <div className="hero-tags">
-            <span className="badge">AI-First Full-Stack Engineer</span>
+            <span className="badge">Full-Stack Engineer · Backend + AI Workflows</span>
             <span className="badge">
               <MapPin size={12} />
-              North Cotabato, PH
+              Makilala, Cotabato, PH
             </span>
             <span className="badge">
               <Clock3 size={12} />
@@ -512,48 +381,32 @@ export default function App() {
           </div>
 
           <p className="hero-bio">
-            I design, build, and ship reliable web and mobile systems with an
-            AI-first mindset. Recent work includes real-time data pipelines,
-            ML-powered product features, and tooling that speeds up delivery.
+            I build scalable backend APIs, data-driven systems, and AI-assisted
+            product workflows. My recent work spans FastAPI services, relational
+            database design, background workers, cloud deployment, and production
+            machine learning features.
           </p>
 
-          <div className="hero-achievements">
-            <div className="hero-achievements-block">
-              <div className="hero-achievements-row">
-                {githubAchievements.map((achievement) => (
-                  <div className="achievement-item" key={achievement.label}>
-                    <img
-                      className="achievement-badge"
-                      src={achievement.image}
-                      alt={achievement.label}
-                      title={achievement.label}
-                    />
-                    {achievement.count ? (
-                      <span className="achievement-count">{achievement.count}</span>
-                    ) : null}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
         </section>
 
         <section id="projects">
-          <div className="section-label">I love building things</div>
+          <div className="section-label">Selected product and systems work</div>
           <div className="projects-grid">
             {projects.map((project) => (
               <article className="project-card" key={project.title}>
                 <div className="project-body">
                   <div className="project-head">
                     <div className="project-title">{project.title}</div>
-                    <a
-                      className="project-visit"
-                      href={project.href}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      Visit
-                    </a>
+                    {project.href ? (
+                      <a
+                        className="project-visit"
+                        href={project.href}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        Visit
+                      </a>
+                    ) : null}
                   </div>
                   <div className="project-desc">{project.desc}</div>
                   <div className="pills">
@@ -608,7 +461,7 @@ export default function App() {
                   <div className="tech-insight-title">{techInsight.title}</div>
                   <p className="tech-insight-copy">{techInsight.detail}</p>
                 </div>
-                <span className="tech-insight-badge">Unlocked</span>
+                <span className="tech-insight-badge">Selected</span>
               </div>
               <div className="tech-insight-stats">
                 {techInsight.stats.map((item) => (
@@ -648,40 +501,52 @@ export default function App() {
           </div>
         </section>
 
-        <section id="journey">
-          <div className="section-label">My journey as a developer</div>
-          <div className="timeline">
-            {journey.map((item) => (
-              <article className="tl-item" key={`${item.year}-${item.title}`}>
-                <div className="tl-dot" />
-                <div className="tl-year">{item.year}</div>
-                <div className="tl-title">{item.title}</div>
-                <div className="tl-desc">{item.desc}</div>
-                <div className="pills">
-                  {item.tech.map((tech) => (
-                    <span className="pill" key={tech}>
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-                <button
-                  type="button"
-                  className={
-                    expandedJourney === item.year ? "timeline-unlock active" : "timeline-unlock"
-                  }
-                  onClick={() =>
-                    setExpandedJourney((current) => (current === item.year ? null : item.year))
-                  }
-                >
-                  {expandedJourney === item.year ? "Hide highlight" : "Unlock highlight"}
-                  <ChevronDown size={15} />
-                </button>
-                {expandedJourney === item.year ? (
-                  <div className="timeline-highlight">
-                    <Trophy size={15} />
-                    <span>{journeyHighlights[item.year] || "Key milestone unlocked."}</span>
+        <section id="achievements">
+          <div className="section-label">Resume achievements</div>
+          <div className="projects-grid">
+            {achievements.map((item) => (
+              <article className="project-card" key={item.title}>
+                <div className="project-body">
+                  <div className="project-title">{item.title}</div>
+                  <div className="project-desc">{item.desc}</div>
+                  <div className="pills">
+                    {item.tech.map((tech) => (
+                      <span className="pill" key={tech}>
+                        {tech}
+                      </span>
+                    ))}
                   </div>
-                ) : null}
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section id="education">
+          <div className="section-label">Education</div>
+          <div className="exp-cards">
+            {education.map((item) => (
+              <article className="exp-card" key={`${item.degree}-${item.school}`}>
+                <div className="exp-card-header">
+                  <div className="exp-card-left">
+                    <div className="exp-card-company">{item.degree}</div>
+                    <div className="exp-card-role">{item.school}</div>
+                  </div>
+                </div>
+                <div className="exp-card-desc">{item.details}</div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section id="certifications">
+          <div className="section-label">Training and certifications</div>
+          <div className="cert-grid">
+            {certifications.map((item) => (
+              <article className="cert-card" key={item}>
+                <div className="pills">
+                  <span className="pill">{item}</span>
+                </div>
               </article>
             ))}
           </div>
@@ -689,62 +554,13 @@ export default function App() {
 
       </div>
 
-      <div className="globe-shell">
-        <div className="globe-section">
-          <div className="globe-content">
-            <h2 className="globe-title">
-              Building reliable full-stack and AI-powered products.
-            </h2>
-            <p className="globe-desc">
-              I help turn ideas into production-ready apps, internal tools, and
-              intelligent systems with React, FastAPI, Python, and modern
-              deployment workflows.
-            </p>
-            <div className="globe-btns">
-              <button
-                type="button"
-                className="btn-p"
-                onClick={() =>
-                  window.open("mailto:kjgnaquines@gmail.com", "_self")
-                }
-              >
-                Get in Touch
-              </button>
-              <button
-                type="button"
-                className="btn-s"
-                onClick={() =>
-                  window.open(
-                    "https://github.com/kiannaquines",
-                    "_blank",
-                    "noopener,noreferrer"
-                  )
-                }
-              >
-                GitHub <ArrowRight size={16} />
-              </button>
-              <a
-                className="btn-s btn-download"
-                href="/kian-naquines-portfolio.pdf"
-                download
-              >
-                <Download size={16} />
-                Download Portfolio
-              </a>
-            </div>
-          </div>
-          <div className="globe-visual">
-            <Globe />
-          </div>
-        </div>
-      </div>
-
       <div className="container">
         <section id="contact">
           <div className="section-label">Get in touch</div>
           <p className="contact-copy">
-            I&apos;m currently open to new opportunities. Whether you have a
-            question or want to say hi, hit that button.
+            I&apos;m open to full-stack engineering roles, backend-heavy product work,
+            and practical AI integrations. Send a short note and I&apos;ll reply with
+            the best next step.
           </p>
           <p className="contact-meta">
             <span className="meta-item">
@@ -754,12 +570,12 @@ export default function App() {
             <span className="meta-separator">·</span>
             <span className="meta-item">
               <Phone size={13} />
-              +63 9013630647
+              +63 9109384278
             </span>
             <span className="meta-separator">·</span>
             <span className="meta-item">
               <MapPin size={13} />
-              North Cotabato, PH
+              Makilala, Cotabato, PH
             </span>
             <span className="meta-separator">·</span>
             <a

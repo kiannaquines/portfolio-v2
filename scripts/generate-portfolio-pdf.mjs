@@ -59,11 +59,9 @@ try {
         nav,
         .floating-nav,
         .hero-achievements,
-        .globe-shell,
         .support-chat,
         .nav-chat-btn,
-        .theme-btn,
-        .btn-download {
+        .theme-btn {
           display: none !important;
         }
         .container {

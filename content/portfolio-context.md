@@ -2,131 +2,141 @@
 
 ## Profile
 
-- Name: Kian Naquines
-- Role: Software Engineer (AI-Ready Full-Stack)
-- Location: Philippines
+- Name: Kian Jearard G. Naquines
+- Role: Software Engineer focused on backend systems, data-driven applications, and AI-assisted workflows
+- Location: Makilala, Province of Cotabato, Philippines 9401
 - Timezone: Asia/Manila
 - Email: kjgnaquines@gmail.com
-- Phone: +63 9013630647
+- Phone: +63 9109384278
 - GitHub: https://github.com/kiannaquines/
+- LinkedIn: linkedin/kiannaquines
 - Website: https://portfolio.askkuyakian.online/
 
 ## Summary
 
-Kian designs, builds, and ships reliable web and mobile systems with an AI-ready mindset. Recent work includes backend APIs, full-stack product features, security-oriented ML experiments, and practical business software.
+Kian is a results-driven Software Engineer with over 8 years of experience building scalable, data-driven systems and deploying machine learning models into production. His work spans ReactJS, NextJS, TypeScript, Python with FastAPI and Django, PHP with Laravel, RESTful APIs, PostgreSQL, MySQL, Docker, Kubernetes, CI/CD, and cloud-native delivery. Recent technical work includes distributed job schedulers on GCP, Domain-Driven Design for enterprise applications, AI-powered tools using Ollama and Groq, and over 100 public open-source projects.
 
 ## Experience
 
 ### HighSpring
 
-- Role: Software Engineer · Flask, FastAPI, MySQL
-- Details: Built backend services and APIs for production web applications with an emphasis on reliability, clean structure, and maintainable data access patterns.
-- Tech: Flask, FastAPI, MySQL, REST APIs
+- Role: Software Engineer
+- Dates: 12/2025 to Current
+- Location: Remote, United States of America
+- Details: Scaled and evolved a production FastAPI backend API with REST endpoints for authentication, file processing, text classification, and Gemini LLM integration. Engineered MySQL schemas, resolved identity-table duplication conflicts, maintained referential integrity across activity logs, and built Celery and Redis workers for locking, rate-limiting, and high-frequency automated syncing. Maintained pytest coverage and developed backend logic for prompt orchestration, document scanning, and grammar parsing.
+- Tech: FastAPI, MySQL, Celery, Redis, Gemini, pytest, RESTful APIs
 
 ### University of Southern Mindanao
 
-- Role: Full-Stack Developer · Laravel, Vue.js, PrimeVue, Inertia.js, SQL Server
-- Details: Delivered full-stack product features focused on admin workflows, operational dashboards, and role-based data management experiences.
-- Tech: Laravel, Vue.js, PrimeVue, Inertia.js, SQL Server
+- Role: Full Stack Developer
+- Dates: 08/2025 to 03/2026
+- Location: Kabacan, Province of Cotabato, Philippines
+- Details: Developed enterprise applications using Domain-Driven Design with Laravel, Inertia.js, and Shadcn UI. Built university-wide production systems that digitized manual workflows, reduced administrative processing overhead, improved operational efficiency, and supported secure high-performance APIs with strict validation and query optimization.
+- Tech: Laravel, Inertia.js, Shadcn UI, Domain-Driven Design, MySQL, GitHub, Notion
+
+### University UICTO
+
+- Role: Full-Stack Developer Intern
+- Dates: 02/2025 to 05/2025
+- Location: Kabacan, Province of Cotabato, Philippines
+- Details: Worked with an agile engineering team using Azure DevOps. Built a custom Domain-Driven Design framework in Laravel with bounded contexts, aggregates, and repositories. Implemented a university student management system and improved Eloquent ORM data access layers with data modeling and indexing strategies.
+- Tech: Laravel, MySQL, Azure DevOps, Eloquent ORM, Domain-Driven Design
 
 ### Upwork
 
-- Role: Freelance Software Developer
-- Details: Built practical client solutions end-to-end, from requirement discovery to deployment, across web platforms and internal business tools.
-- Tech: React, Python, PHP, FastAPI, Laravel, Docker
+- Role: Part-Time Software Developer
+- Dates: 03/2022 to 11/2024
+- Location: Remote
+- Details: Delivered tailored software for global clients from requirements discussions to launch. Built scalable web applications, backend services, interface designs, authentication mechanisms, agentic API integrations, and data-intensive MySQL systems with query and indexing optimization.
+- Tech: React, Python, PHP, Laravel, MySQL, RESTful APIs
 
-## Projects
+## Projects and Achievements
+
+### Distributed Background Job Scheduler
+
+- Details: Designed and deployed a distributed background job scheduler on Google Cloud Platform using Cloud Run, Cloud SQL, and worker pools. Implemented fault-tolerant execution, horizontal scaling, and proactive monitoring for high availability and operational resilience.
+- Tech: GCP Cloud Run, GCP Cloud SQL, Worker Pools, Prometheus, CI/CD
+
+### Human Resource Information System
+
+- Details: Designed and developed a scalable Human Resource Information System for employee lifecycle management, payroll processing, and workforce analytics.
+- Tech: Laravel, Inertia.js, MySQL, Domain-Driven Design, RESTful APIs
 
 ### Crowd Monitoring with AI
 
-- Details: Capstone platform for privacy-conscious crowd monitoring using WiFi probe signals with real-time dashboard updates.
-- Tech: TypeScript, FastAPI, React, MQTT, Docker, ML
+- Details: Architected a real-time crowd monitoring system using Wi-Fi probe request signals and AI-based inference models for population estimation and analytics in dynamic environments.
+- Tech: TypeScript, React, FastAPI, MQTT, Docker, Machine Learning
 - Link: https://github.com/kiannaquines/crowd-monitoring-app
 
 ### Web Application Firewall
 
-- Details: Machine-learning-powered WAF that classifies and filters suspicious web traffic.
+- Details: Engineered an AI-driven Web Application Firewall capable of adaptive threat detection and mitigation using intelligent traffic analysis to enhance application-layer security.
 - Tech: Python, Scikit-learn, Pandas, Jupyter
 - Link: https://github.com/kiannaquines/web-application-firewall-machine-learning
 
-### Pharmacy System
-
-- Details: Full-stack TypeScript-based pharmacy management application for day-to-day pharmacy operations.
-- Tech: TypeScript, React, Node.js, PostgreSQL
-- Link: https://github.com/kiannaquines/pharmacy-system
-
-### Django Pharmacy SaaS
-
-- Details: Django-based SaaS-style pharmacy project focused on scalable multi-user workflows.
-- Tech: Django, Python, HTML, CSS
-- Link: https://github.com/kiannaquines/django-pharmacy-saas
-
-### eReportMo Mobile App
-
-- Details: Flutter incident-reporting app focused on straightforward mobile reporting experiences.
-- Tech: Flutter, Dart
-- Link: https://github.com/kiannaquines/ereportmo-app
-
 ### Feed Formulation Optimizer
 
-- Details: Linear-programming-powered backend system for optimizing poultry feed based on cost and nutrition constraints.
+- Details: Developed an optimization engine for poultry feed formulation using Linear Programming to improve nutritional efficiency and reduce resource waste through optimized decision models.
 - Tech: Python, Linear Programming, Optimization
 - Link: https://github.com/kiannaquines/backend-feedformulation
 
+### Open-Source Systems
+
+- Details: Built and maintained over 100 public GitHub projects focused on reusable architectures, clean abstractions, developer tooling, full-stack development, applied AI, and enterprise-grade system design.
+- Tech: Git, Code Review, ReactJS, FastAPI, Laravel
+- Link: https://github.com/kiannaquines
+
 ## Technologies
 
-React, Next.js, TypeScript, JavaScript, Tailwind CSS, Node.js, Python, Go, PHP, Django, Flask, FastAPI, Laravel, Vue.js, Inertia.js, SQL Server, PostgreSQL, MySQL, Redis, Supabase, REST APIs, GitHub Actions, Flutter, Dart, Scikit-learn, Pandas, Docker, MQTT, Linear Programming
+ReactJS, NextJS, TypeScript, Python, Django, FastAPI, SQLAlchemy, PHP, Laravel, MySQL, PostgreSQL, RESTful APIs, WebSocket, OpenSearch, Docker, Kubernetes, AWS, GCP Cloud Run, GCP Cloud SQL, Prometheus, Git, CI/CD, Code Review, LangChain, Ollama, Groq, Gemini, Celery, Redis, Linear Programming, Machine Learning
 
-## Journey
+## Achievements
 
-### Now
+### Distributed Background Job Scheduler
 
-- Title: Software Engineer Building AI-Ready Products
-- Details: Shipping full-stack applications and backend APIs while blending practical product delivery with AI-assisted problem solving.
-- Tech: Python, TypeScript, FastAPI, React, Docker, GitHub Actions
+- Details: Designed and deployed a GCP scheduler using Cloud Run, Cloud SQL, and worker pools with fault-tolerant execution, horizontal scaling, and proactive monitoring.
+- Tech: GCP Cloud Run, GCP Cloud SQL, Worker Pools, Prometheus
 
-### 2026
+### Human Resource Information System
 
-- Title: Modern Product Momentum
-- Details: Expanded project range with pharmacy systems and client-facing web/mobile applications.
-- Tech: TypeScript, Django, Flutter, Node.js
+- Details: Designed and developed HRIS workflows for employee lifecycle management, payroll processing, and workforce analytics to improve data visibility.
+- Tech: Laravel, MySQL, DDD, RESTful APIs
 
-### 2025
+### Open-Source Systems
 
-- Title: Architecture and Backend Depth
-- Details: Built backend-first projects exploring maintainable service structure and scalable workflows.
-- Tech: Flask, FastAPI, MySQL, Docker
+- Details: Built and maintained 100+ public GitHub projects focused on reusable architectures, clean abstractions, developer tooling, applied AI, and enterprise-grade design.
+- Tech: Git, Code Review, ReactJS, FastAPI, Laravel
 
-### 2024
+### AI Crowd Monitoring
 
-- Title: IoT Crowd Monitoring System
-- Details: Developed privacy-conscious crowd detection using WiFi probe requests, real-time dashboards with WebSockets, and continued learning in Agile Project Management and Google AI Essentials.
-- Tech: MQTT, Docker, ML, FastAPI, Go, React
+- Details: Architected real-time population estimation using Wi-Fi probe request signals and AI-based inference models for analytics in dynamic environments.
+- Tech: FastAPI, React, MQTT, Machine Learning
 
-### 2023
+### AI-Driven Web Application Firewall
 
-- Title: Applied ML and Business Systems
-- Details: Built practical ML prototypes and delivered business systems in operational domains.
-- Tech: Python, Django, Scikit-learn, Pandas
+- Details: Engineered adaptive threat detection and mitigation using intelligent traffic analysis to strengthen application-layer security.
+- Tech: Python, Scikit-learn, Pandas, Security
 
-### 2022
+### Feed Formulation Optimization
 
-- Title: Freelance Growth
-- Details: Delivered an inventory management system for a retail chain and an e-commerce platform with payment integration.
-- Tech: PHP, MySQL, JavaScript, Bootstrap
+- Details: Developed a linear programming engine for poultry feed formulation to improve nutritional efficiency and reduce resource waste.
+- Tech: Python, Linear Programming, Optimization
 
-### 2021
+## Education
 
-- Title: Algorithms and Data Structures
-- Details: Built strong foundations in problem solving, algorithms, and coding practice in Python and Java.
-- Tech: Python, Java, DSA
+- Bachelor of Science in Information Systems, University of Southern Mindanao, 06/2025
 
-### 2018
+## Training and Certifications
 
-- Title: Programming Journey Begins
-- Details: Learned web fundamentals and gradually moved from static sites to full-stack product development.
-- Tech: PHP, HTML, CSS, JavaScript
+- Meta Introduction to Frontend Development
+- Meta Introduction to Backend Development
+- Microsoft Full Stack Development
+- Google Agile Project Management
+- Python for Cybersecurity Specialization (InfoSec)
+- Python for Active Defense
+- Harvard CS50 Computer Science for Business Professional (Ongoing)
+- Harvard CS50 Introduction to Artificial Intelligence with Python (Ongoing)
 
 ## Work Availability
 
-Kian is open to new opportunities and collaborations on interesting projects, especially full-stack engineering, backend systems, and AI-powered solutions.
+Kian is open to full-stack engineering roles, backend-heavy product work, cloud systems, practical AI integrations, and collaborations on scalable data-driven systems.
